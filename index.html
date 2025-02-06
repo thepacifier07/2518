@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Lock Pattern</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f4f4f4;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+        }
+        .pattern-container {
+            display: grid;
+            grid-template-columns: repeat(3, 60px);
+            grid-gap: 25px;
+            width: 220px;
+            margin: 120px auto;
+        }
+        .dot {
+            width: 60px;
+            height: 60px;
+            background-color: #555;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .dot.active {
+            background-color: #ffd700;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Vintage Pattern Lock</h1>
+    <p>Draw the secret pattern to unlock!</p>
+    <div class="pattern-container" id="patternContainer">
+        <div class="dot" data-id="1"></div>
+        <div class="dot" data-id="2"></div>
+        <div class="dot" data-id="3"></div>
+        <div class="dot" data-id="4"></div>
+        <div class="dot" data-id="5"></div>
+        <div class="dot" data-id="6"></div>
+        <div class="dot" data-id="7"></div>
+        <div class="dot" data-id="8"></div>
+        <div class="dot" data-id="9"></div>
+    </div>
+    <p class="message" id="message"></p>
+    
+    <script>
+        let selectedPattern = [];
+        const correctPattern = [1, 5, 9]; // Example: Triangle
+        let attemptCount = 0;
+        const maxAttempts = 5;
+
+        function setSession() {
+            sessionStorage.setItem('unlocked', 'true');
+        }
+
+        document.querySelectorAll('.dot').forEach(dot => {
+            dot.addEventListener('click', function() {
+                const id = parseInt(this.getAttribute('data-id'));
+                if (!selectedPattern.includes(id)) {
+                    selectedPattern.push(id);
+                    this.classList.add('active');
+                }
+                if (selectedPattern.length === correctPattern.length) {
+                    if (JSON.stringify(selectedPattern) === JSON.stringify(correctPattern)) {
+                        setSession();
+                        document.getElementById('message').innerText = 'Pattern Correct! Unlocking...';
+                        setTimeout(() => window.location.href = 'secret.html', 1000);
+                    } else {
+                        attemptCount++;
+                        if (attemptCount >= maxAttempts) {
+                            alert('Too many failed attempts! Refresh the page to try again.');
+                            document.body.innerHTML = '<h1>Access Blocked. Refresh to Try Again.</h1>';
+                            return;
+                        }
+                        document.getElementById('message').innerText = 'Wrong Pattern! Try Again.';
+                        setTimeout(() => {
+                            selectedPattern = [];
+                            document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+                            document.getElementById('message').innerText = '';
+                        }, 1500);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
