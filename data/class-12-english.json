@@ -1,10 +1,10 @@
 {
   "class": {
-    "id": "XI",
-    "name": "XI"
+    "id": "class-12",
+    "name": "Class XII"
   },
   "subject": {
-    "id": "english-literature",
+    "id": "english",
     "name": "English"
   },
   "chapters": [
