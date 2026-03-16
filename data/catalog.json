@@ -1,0 +1,113 @@
+{
+  "classes": [
+    {
+      "id": "class-6",
+      "name": "Class 6",
+      "subjects": [
+        {
+          "id": "science",
+          "name": "Science",
+          "file": "./data/class-6-science.json"
+        },
+        {
+          "id": "math",
+          "name": "Math",
+          "file": "./data/class-6-math.json"
+        }
+      ]
+    },
+    {
+      "id": "class-7",
+      "name": "Class 7",
+      "subjects": [
+        {
+          "id": "english",
+          "name": "English",
+          "file": "./data/class-7-english.json"
+        }
+      ]
+    },
+    {
+      "id": "class-11",
+      "name": "Class XI",
+      "subjects": [
+        {
+          "id": "physics",
+          "name": "Physics",
+          "file": "./data/class-11-physics.json"
+        },
+        {
+          "id": "chemistry",
+          "name": "Chemistry",
+          "file": "./data/class-11-chemistry.json"
+        },
+        {
+          "id": "math",
+          "name": "Mathematics",
+          "file": "./data/class-11-math.json"
+        },
+        {
+          "id": "biology",
+          "name": "Biology",
+          "file": "./data/class-11-biology.json"
+        },
+        {
+          "id": "english",
+          "name": "English",
+          "file": "./data/class-11-english.json"
+        },
+        {
+          "id": "cs",
+          "name": "Computer Science",
+          "file": "./data/class-11-cs.json"
+        },
+        {
+          "id": "economics",
+          "name": "Economics",
+          "file": "./data/class-11-economics.json"
+        }
+      ]
+    },
+    {
+      "id": "class-12",
+      "name": "Class XII",
+      "subjects": [
+        {
+          "id": "physics",
+          "name": "Physics",
+          "file": "./data/class-12-physics.json"
+        },
+        {
+          "id": "chemistry",
+          "name": "Chemistry",
+          "file": "./data/class-12-chemistry.json"
+        },
+        {
+          "id": "math",
+          "name": "Mathematics",
+          "file": "./data/class-12-math.json"
+        },
+        {
+          "id": "biology",
+          "name": "Biology",
+          "file": "./data/class-12-biology.json"
+        },
+        {
+          "id": "english",
+          "name": "English",
+          "file": "./data/class-12-english.json"
+        },
+        {
+          "id": "cs",
+          "name": "Computer Science",
+          "file": "./data/class-12-cs.json"
+        },
+        {
+          "id": "economics",
+          "name": "Economics",
+          "file": "./data/class-12-economics.json"
+        }
+      ]
+    }
+  ]
+}
