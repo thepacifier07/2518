@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>School Q&A</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>School Question Answers</h1>
+      <p>Select class, subject, and chapter to view questions and answers.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls card">
+      <div class="field">
+        <label for="classSelect">Class</label>
+        <select id="classSelect">
+          <option value="">Select class</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="subjectSelect">Subject</label>
+        <select id="subjectSelect" disabled>
+          <option value="">Select subject</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="chapterSelect">Chapter</label>
+        <select id="chapterSelect" disabled>
+          <option value="">Select chapter</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="status" class="status" aria-live="polite"></section>
+
+    <section id="chapterInfo" class="card hidden">
+      <h2 id="chapterTitle">Chapter</h2>
+      <p id="chapterMeta" class="muted"></p>
+    </section>
+
+    <section id="qaList" class="qa-list"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
