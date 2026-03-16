@@ -1,0 +1,14 @@
+{
+  "classes": [
+    {
+      "id": "class-11",
+      "name": "Class XI",
+      "subjects": ["physics", "chemistry", "math", "biology", "english", "cs", "economics"]
+    },
+    {
+      "id": "class-12",
+      "name": "Class XII",
+      "subjects": ["physics", "chemistry", "math", "biology", "english", "cs", "economics"]
+    }
+  ]
+}
